@@ -2,9 +2,10 @@ import {BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom
 import SignUpPage from './pages/SignUpPage'
 import HomePage from './pages/HomePage'
 import LoginPage from './pages/LoginPage'
-import Navbar from './components/Navbar'
+import Navbar from './components/NavBar'
 import AuthStatus from './components/AuthStatus'
 import Dashboard from './components/Dashboard'
+import CartButton from './components/CartButton'
 
 
 const App = () => {
@@ -13,6 +14,7 @@ const App = () => {
         <Router>
             <AuthStatus/>
             <Dashboard/>
+            <CartButton user={true} cart={['pc', 'mouse', 'teclado']}/>
             <Navbar/>
             <Routes>
                <Route path="/" element={<HomePage/>}/>
