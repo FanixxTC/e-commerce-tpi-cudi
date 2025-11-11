@@ -6,15 +6,13 @@ import Navbar from './components/NavBar'
 import AuthStatus from './components/AuthStatus'
 import Dashboard from './components/Dashboard'
 import CartButton from './components/CartButton'
+import NavbarBase from './components/NavbarBase'
 
 
 const App = () => {
     const userLogin = false
     return (
         <Router>
-            <AuthStatus/>
-            <Dashboard/>
-            <CartButton user={true} cart={['pc', 'mouse', 'teclado']}/>
             <Navbar/>
             <Routes>
                <Route path="/" element={<HomePage/>}/>
